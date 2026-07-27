@@ -1,6 +1,12 @@
-# Zamora 89 Urban Stay · Version 5.0
+# Zamora 89 Urban Stay · Version 5.1
 
 Aplicación web lista para GitHub Pages.
+
+## Cambios de la versión 5.1
+- Corrección definitiva del espacio vacío bajo el mapa.
+- Baremo orientativo de precios por persona en restaurantes y cafeterías.
+- Tarjetas más limpias, sin etiquetas visibles.
+- Actualización de caché para mostrar los cambios inmediatamente.
 
 ## Funciones
 - Diseño dashboard responsive.
@@ -14,9 +20,3 @@ Aplicación web lista para GitHub Pages.
 Sube todo el contenido de esta carpeta a la raíz del repositorio y activa GitHub Pages desde la rama principal.
 
 > Algunos datos externos, como el tiempo, necesitan conexión. Los horarios y eventos deben comprobarse en sus enlaces oficiales.
-
-
-## Versión 5.0.2
-- Corregidas las tarjetas que reutilizaban fotografías del apartamento.
-- Nuevos fondos visuales diferenciados para categorías y eventos.
-- Actualizada la caché de la PWA para publicar el cambio inmediatamente.
