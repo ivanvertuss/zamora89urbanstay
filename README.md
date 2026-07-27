@@ -1,22 +1,12 @@
-# Zamora 89 Urban Stay · Version 5.1
+# Zamora 89 Urban Stay · Release 6.0
 
-Aplicación web lista para GitHub Pages.
+Versión optimizada para móvil y preparada como PWA instalable.
 
-## Cambios de la versión 5.1
-- Corrección definitiva del espacio vacío bajo el mapa.
-- Baremo orientativo de precios por persona en restaurantes y cafeterías.
-- Tarjetas más limpias, sin etiquetas visibles.
-- Actualización de caché para mostrar los cambios inmediatamente.
-
-## Funciones
-- Diseño dashboard responsive.
-- Idiomas reales: español, inglés, francés, portugués, alemán e italiano.
-- Cambio de idioma instantáneo y persistente mediante `localStorage`.
-- Recomendaciones, mapa, itinerarios, agenda, clima y concierge local.
-- PWA instalable y caché offline.
-- Panel local del propietario (PIN inicial: 8989).
-
-## Publicación
-Sube todo el contenido de esta carpeta a la raíz del repositorio y activa GitHub Pages desde la rama principal.
-
-> Algunos datos externos, como el tiempo, necesitan conexión. Los horarios y eventos deben comprobarse en sus enlaces oficiales.
+## Cambios principales
+- Botón visible para instalar la guía como aplicación.
+- Instrucciones específicas para iPhone/iPad.
+- Diseño móvil revisado para Android, iPhone y tablet.
+- Tarjetas de categorías y eventos con ilustraciones propias, sin fotos del apartamento.
+- Mapa adaptado sin espacios blancos.
+- Caché y recursos actualizados a la versión 6.0.
+- Mantiene idiomas, precios, conserje, panel propietario y contenido existente.
