@@ -14,3 +14,9 @@ Aplicación web lista para GitHub Pages.
 Sube todo el contenido de esta carpeta a la raíz del repositorio y activa GitHub Pages desde la rama principal.
 
 > Algunos datos externos, como el tiempo, necesitan conexión. Los horarios y eventos deben comprobarse en sus enlaces oficiales.
+
+
+## Versión 5.0.2
+- Corregidas las tarjetas que reutilizaban fotografías del apartamento.
+- Nuevos fondos visuales diferenciados para categorías y eventos.
+- Actualizada la caché de la PWA para publicar el cambio inmediatamente.
