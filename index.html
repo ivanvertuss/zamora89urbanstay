@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#031725"><meta name="description" content="Guía digital premium para huéspedes de Zamora 89 Urban Stay, Vigo.">
-<meta name="application-name" content="Zamora 89 Urban Stay"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="version" content="6.0.0">
+<meta name="application-name" content="Zamora 89 Urban Stay"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="version" content="7.2.0">
 <title>Zamora 89 Urban Stay · Vigo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/favicon.png"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="stylesheet" href="styles.css?v=6.0">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/favicon.png"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="stylesheet" href="styles.css?v=7.2">
 </head><body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
 <div class="welcome is-hidden" id="welcome"><button id="enterBtn" hidden>Entrar</button></div>
@@ -108,13 +108,16 @@
 <section class="section install-section" id="instalar">
 <div class="install-card"><img src="assets/icon-192.png" alt="Icono de Zamora 89"><div><span class="eyebrow">GUÍA EN TU MÓVIL</span><h2>Instala Zamora 89 como una aplicación.</h2><p>Ábrela desde la pantalla de inicio, a pantalla completa y con acceso rápido durante tu estancia.</p><button class="button button--gold" id="installBtn" data-i18n="install">Instalar guía</button><small id="installHelp">En iPhone: Compartir → Añadir a pantalla de inicio.</small></div></div>
 </section>
-<footer><img alt="Zamora 89 Urban Stay" src="assets/logo-z89.png"/><p>Zamora 89 Urban Stay · Vigo · Versión 6.0</p></footer>
+<footer><img alt="Zamora 89 Urban Stay" src="assets/logo-z89.png"/><p>Zamora 89 Urban Stay · Vigo · Versión 7.2 · Urban Stay Lab</p></footer>
 <div aria-hidden="true" class="modal" id="detailModal"><div class="modal__panel"><button class="modal__close" data-close="detailModal">×</button><div id="detailContent"></div></div></div>
 <div aria-hidden="true" class="modal" id="conciergeModal"><div class="modal__panel modal__panel--chat"><button class="modal__close" data-close="conciergeModal">×</button><div class="chat-head"><span>✦</span><div><strong>Z89 Concierge</strong><small data-i18n="conciergeSub">Asistente local de la estancia</small></div></div><div class="chat-messages" id="chatMessages"></div><div class="suggestions" id="chatSuggestions"></div><form class="chat-form" id="chatForm"><input autocomplete="off" data-i18n-placeholder="askPlaceholder" id="chatInput" placeholder="Pregunta por desayunos, lluvia, parking…"/><button type="submit">➤</button></form><small class="chat-note" data-i18n="aiNote">Respuestas basadas en la guía local. Comprueba horarios y disponibilidad antes de salir.</small></div></div>
 <div aria-hidden="true" class="modal" id="adminModal"><div class="modal__panel modal__panel--admin"><button class="modal__close" data-close="adminModal">×</button><h2>Panel del propietario</h2><p>Los cambios se guardan solo en este navegador. Exporta una copia para incorporarlos al proyecto.</p><label>PIN de acceso<input id="adminPin" placeholder="Introduce el PIN" type="password"/></label><button class="button" id="adminLogin">Acceder</button><div hidden="" id="adminArea"><label>Texto de bienvenida<textarea id="adminWelcome"></textarea></label><label>URL de reseñas<input id="adminReviewUrl"/></label><label>Aviso destacado<textarea id="adminNotice" placeholder="Ej.: Ascensor temporalmente fuera de servicio"></textarea></label><div class="admin-actions"><button class="button" id="saveAdmin">Guardar</button><button class="button button--outline" id="exportAdmin">Exportar JSON</button><button class="button button--danger" id="resetAdmin">Restablecer</button></div></div></div></div>
 <div aria-live="polite" class="toast" id="toast" role="status"></div>
-<script src="data.js?v=5.0.1"></script>
-<script src="app.js?v=5.0.1"></script>
-<script src="locales-v5.0.1.js?v=5.0.1"></script>
+<script src="data.js?v=7.2"></script>
+<script src="app.js?v=7.2"></script>
+<script src="locales-v5.0.1.js?v=7.2"></script>
 <script>document.getElementById('sideConcierge').addEventListener('click',e=>{e.preventDefault();document.getElementById('openConcierge').click()});document.getElementById('featureConcierge').addEventListener('click',e=>{e.preventDefault();document.getElementById('openConcierge').click()});</script>
+
+<script src="analytics-config.js?v=7.2"></script>
+<script src="analytics.js?v=7.2"></script>
 </body></html>
