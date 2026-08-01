@@ -33,3 +33,5 @@ main,footer{margin-left:230px}.hero-dashboard{padding-top:62px;display:grid;grid
  .section{padding:44px 16px}.place-grid,.plan-grid,.events-grid,.utility-grid,.quick-grid{grid-template-columns:1fr}.map-panel iframe{height:320px}
  .install-banner__icon{display:none}.install-banner__copy strong{font-size:14px}.install-banner .button{font-size:14px}
 }
+
+.feature-image.parking{background:linear-gradient(145deg,#176b3a,#d8c16a)}.feature-image.parking:before{content:'P';color:#fff;font-weight:900;font-family:Arial,sans-serif}.parking-feature{box-shadow:0 0 0 3px rgba(216,154,43,.18)}
