@@ -1,1 +1,1 @@
-v7.4 - Aparcamiento visible desde la portada y el menu. Incluye parking.html, Telpark y mapa de zonas gratuitas.
+Incluye Zona gratuita 1 y Zona gratuita 2 en ambas webs.
