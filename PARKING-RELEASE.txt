@@ -1,4 +1,4 @@
-Zamora 89 - z89-v8-3-parking-i18n
+Barcelona 80 - b80-v6-3-parking-i18n
 - Diseño unificado con Barcelona
 - Dos zonas gratuitas delimitadas
 - Enlaces Google Maps corregidos
