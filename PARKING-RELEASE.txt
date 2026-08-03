@@ -1,2 +1,6 @@
-Zamora 89 v8.2
-Reconstruida desde la web auténtica de Zamora. Dos mapas Urban Stay con perímetros marcados.
+Zamora 89 - z89-v8-3-parking-i18n
+- Diseño unificado con Barcelona
+- Dos zonas gratuitas delimitadas
+- Enlaces Google Maps corregidos
+- 7 idiomas
+- Caché renovada
