@@ -1,0 +1,24 @@
+ZAMORA 89 URBAN STAY · RELEASE 2.0 FINAL
+
+Incluye:
+- Instalación automática como app en Android/Chrome.
+- Instrucciones visuales para iPhone/Safari.
+- PWA con iconos, manifest y funcionamiento offline básico.
+- Portal aprobado y WiFi limpio con QR.
+- SEO, robots.txt y sitemap.xml.
+- Archivos duplicados y recursos antiguos eliminados.
+- Preparado para GitHub Pages y zamora89urbanstay.com.
+
+SUBIDA A GITHUB
+1. Vacía el repositorio.
+2. Descomprime este ZIP.
+3. Arrastra TODO el contenido directamente al repositorio.
+4. Pulsa Commit changes.
+
+El archivo index.html debe quedar visible en la raíz del repositorio.
+
+
+VERSIÓN MULTILINGÜE
+- Español, inglés, francés, portugués y alemán.
+- Selector integrado en la cabecera.
+- Preferencia guardada en el dispositivo.

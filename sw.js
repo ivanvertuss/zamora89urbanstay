@@ -1,1 +1,27 @@
-const CACHE='urban-stay-zamora-final-20260804';const CORE=['./','./index.html','./styles.css?v=3.0.1','./app.js?v=3.0.1','./config.js?v=3.0.1','./locales.js?v=3.0.1'];self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)))});self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;e.respondWith(fetch(e.request).then(r=>{if(r.ok&&new URL(e.request.url).origin===location.origin){let c=r.clone();caches.open(CACHE).then(x=>x.put(e.request,c))}return r}).catch(()=>caches.match(e.request).then(r=>r||caches.match('./index.html'))))});
+const CACHE='z89-final-oficial-multilang-2026-08-05';
+const CORE=["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./assets/logo-z89.png", "./assets/icon-192.png", "./assets/icon-512.png", "./assets/living-renovated.jpeg", "./assets/kitchen.jpeg", "./assets/portal-aprobado.png", "./assets/wifi-qr-limpio.png"];
+self.addEventListener('install',event=>{
+  self.skipWaiting();
+  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)));
+});
+self.addEventListener('activate',event=>{
+  event.waitUntil(
+    caches.keys()
+      .then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key))))
+      .then(()=>self.clients.claim())
+  );
+});
+self.addEventListener('fetch',event=>{
+  if(event.request.method!=='GET')return;
+  const url=new URL(event.request.url);
+  if(url.origin!==self.location.origin)return;
+  event.respondWith(
+    caches.match(event.request).then(cached=>cached||fetch(event.request).then(response=>{
+      if(response.ok){
+        const copy=response.clone();
+        caches.open(CACHE).then(cache=>cache.put(event.request,copy));
+      }
+      return response;
+    }).catch(()=>event.request.mode==='navigate'?caches.match('./index.html'):undefined))
+  );
+});

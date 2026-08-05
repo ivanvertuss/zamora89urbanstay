@@ -1,4 +1,356 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#06283f"><meta name="description" content="Urban Stay Guide · Vigo"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css?v=3.0.1"><title>Urban Stay Guide</title></head><body>
-<header class="topbar"><button class="icon-btn mobile" id="menuBtn">☰</button><a class="brand" href="#home"><img id="brandLogo"><span id="brandName"></span></a><nav id="desktopNav"></nav><select id="languageSelect"><option value="es">🇪🇸 ES</option><option value="en">🇬🇧 EN</option><option value="fr">🇫🇷 FR</option><option value="de">🇩🇪 DE</option><option value="it">🇮🇹 IT</option><option value="pt">🇵🇹 PT</option><option value="nl">🇳🇱 NL</option></select></header>
-<aside id="drawer" class="drawer hidden"></aside><main id="app"></main><footer><img id="footerLogo"><p id="footerText"></p></footer>
-<script src="config.js?v=3.0.1"></script><script src="locales.js?v=3.0.1"></script><script src="app.js?v=3.0.1"></script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#082f4f">
+  <meta name="description" content="Guía digital oficial de Zamora 89 Urban Stay en Vigo: llegada, WiFi, apartamento, restaurantes, playas, servicios y recomendaciones.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://zamora89urbanstay.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Zamora 89 Urban Stay · Guía de huéspedes">
+  <meta property="og:description" content="Todo lo necesario para disfrutar de tu estancia en Vigo.">
+  <meta property="og:url" content="https://zamora89urbanstay.com/">
+  <meta property="og:image" content="https://zamora89urbanstay.com/assets/living-renovated.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Z89 · Zamora 89 Urban Stay · Vigo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="welcome" id="welcome" aria-label="Bienvenida">
+  <img src="assets/living-renovated.jpeg" alt="Salón renovado de Zamora 89 Urban Stay">
+  <div class="welcome__shade"></div>
+  <div class="welcome__content">
+    <img class="welcome__logo" src="assets/logo-z89.png" alt="Zamora 89 Urban Stay">
+    <p>Bienvenido a tu estancia en Vigo.</p>
+    <button class="button button--gold" id="enterBtn">Entrar en la guía</button>
+  </div>
+</div>
+<header class="topbar">
+  <button class="icon-button" id="menuBtn" aria-expanded="false" aria-label="Abrir menú">☰</button>
+  <a class="brand" href="#inicio" aria-label="Ir al inicio"><img src="assets/logo-z89.png" alt="Zamora 89 Urban Stay"></a>
+  <div class="topbar__actions">
+    <div class="language-picker">
+      <button class="language-toggle" id="languageToggle" type="button" aria-expanded="false" aria-controls="languageMenu" aria-label="Seleccionar idioma"><span id="languageCurrent">🇪🇸 ES</span><span aria-hidden="true">⌄</span></button>
+      <div class="language-menu" id="languageMenu">
+        <button type="button" data-language="es">🇪🇸 Español</button>
+        <button type="button" data-language="en">🇬🇧 English</button>
+        <button type="button" data-language="fr">🇫🇷 Français</button>
+        <button type="button" data-language="pt">🇵🇹 Português</button>
+        <button type="button" data-language="de">🇩🇪 Deutsch</button>
+      </div>
+    </div>
+    <a class="icon-button" href="https://www.google.com/maps/dir/?api=1&destination=Calle+Zamora+89%2C+Vigo" target="_blank" rel="noopener" aria-label="Cómo llegar">⌖</a>
+  </div>
+</header>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <button class="drawer__close" id="closeMenu" aria-label="Cerrar menú">×</button>
+  <nav>
+    <a href="#inicio">Inicio</a><a href="#llegada">Llegada y acceso</a><a href="#aparcamiento">Aparcamiento</a><a href="#wifi">WiFi</a><a href="#apartamento">El apartamento</a><a href="#habitaciones">Habitaciones</a>
+    <a href="#vigo">Descubre Vigo</a><a href="#eventos">Eventos en Vigo</a><a href="#restaurantes">Restaurantes</a><a href="#cafeterias">Cafeterías</a>
+    <a href="#servicios">Servicios cercanos</a><a href="#instalar">Instalar la app</a><a href="#checkout">Check-out</a><a href="#valoracion">Valora tu estancia</a>
+  </nav>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main>
+<section class="hero section" id="inicio">
+  <div class="hero__copy">
+    <span class="eyebrow">VIGO · GALICIA</span>
+    <h1>Tu estancia en Vigo empieza aquí.</h1>
+    <p>Todo lo necesario para llegar, instalarte y descubrir la ciudad con nuestras recomendaciones personales.</p>
+    <div class="hero__actions"><a class="button" href="#apartamento">Explorar la guía</a></div>
+  </div>
+  <img src="assets/living-renovated.jpeg" alt="Salón renovado de Zamora 89">
+</section>
+<section class="quick-grid section section--compact" aria-label="Accesos principales">
+  <a class="quick-card" href="#llegada"><span>↳</span><strong>Llegada</strong><small>Reconoce el edificio</small></a>
+  <a class="quick-card" href="#wifi"><span>⌁</span><strong>WiFi</strong><small>Conexión mediante QR</small></a>
+  <a class="quick-card" href="#apartamento"><span>⌂</span><strong>El apartamento</strong><small>7 habitaciones · 4 baños</small></a>
+  <a class="quick-card" href="#vigo"><span>⌖</span><strong>Descubre Vigo</strong><small>Lugares imprescindibles</small></a>
+</section>
+<section class="section section--arrival" id="llegada">
+  <div class="section-heading">
+    <span class="eyebrow">LLEGADA AL EDIFICIO</span>
+    <h2>Así reconocerás Zamora 89.</h2>
+    <p>La entrada se encuentra en el número 89 de la calle Zamora. El edificio dispone de puerta automática, rampa y ascensor.</p>
+  </div>
+  <figure class="arrival-approved">
+    <img src="assets/portal-aprobado.png" alt="Entrada y acceso de Zamora 89 Urban Stay">
+  </figure>
+  <div class="action-row"><a class="button" href="https://www.google.com/maps/dir/?api=1&destination=Calle+Zamora+89%2C+Vigo" target="_blank" rel="noopener">Abrir ruta en Google Maps</a></div>
+</section>
+
+
+<section class="section section--parking" id="aparcamiento">
+  <div class="section-heading">
+    <span class="eyebrow">LLEGADA EN COCHE</span>
+    <h2>Aparcamiento cerca de Zamora 89.</h2>
+    <p>Consulta la zona gratuita recomendada, el horario de la zona ORA y el parking cubierto más próximo.</p>
+  </div>
+  <figure class="parking-guide">
+    <img src="assets/aparcamiento-zamora89.png" alt="Guía de aparcamiento de Zamora 89 con zona gratuita, zona ORA y parking cubierto">
+  </figure>
+  <div class="parking-actions">
+    <a class="button" href="https://www.google.com/maps/search/?api=1&query=aparcamiento+cerca+de+Calle+Zamora+89+Vigo" target="_blank" rel="noopener">Abrir zona en Google Maps</a>
+    <a class="button button--outline" href="https://www.telpark.com/" target="_blank" rel="noopener">Abrir Telpark</a>
+  </div>
+  <p class="parking-note"><strong>Zona ORA:</strong> lunes a viernes, de 09:00 a 14:00 y de 16:00 a 20:00. Máximo 2 horas. Comprueba siempre la señalización de la calle.</p>
+</section>
+
+<section class="section section--tint" id="wifi">
+  <div class="section-heading">
+    <span class="eyebrow">CONEXIÓN DEL APARTAMENTO</span>
+    <h2>WiFi en un solo paso.</h2>
+    <p>Escanea el código con la cámara del móvil o introduce los datos manualmente.</p>
+  </div>
+  <article class="wifi-clean-card">
+    <div class="wifi-clean-info">
+      <span class="wifi-icon" aria-hidden="true">⌁</span>
+      <div class="wifi-field">
+        <small>LÍNEA</small>
+        <strong id="wifiNetwork">MOVISTAR_1440</strong>
+      </div>
+      <div class="wifi-divider"></div>
+      <div class="wifi-field">
+        <small>CLAVE</small>
+        <strong id="wifiPassword">PVkoGihBWPyYa8wAD6oy</strong>
+      </div>
+      <button class="button button--small button--outline" id="copyWifi" type="button">Copiar clave</button>
+    </div>
+    <button class="wifi-clean-qr" type="button" data-qr="assets/wifi-qr-limpio.png" aria-label="Ampliar código QR del WiFi">
+      <img src="assets/wifi-qr-limpio.png" alt="Código QR para conectarse al WiFi">
+      <span>Escanear para conectar</span>
+    </button>
+  </article>
+</section>
+
+<div class="lightbox" id="wifiLightbox" aria-hidden="true">
+  <button class="lightbox__close" id="closeWifi" type="button" aria-label="Cerrar imagen">×</button>
+  <img id="wifiLightboxImage" src="assets/wifi-qr-limpio.png" alt="Código QR del WiFi ampliado">
+</div>
+
+<section class="section" id="apartamento">
+  <div class="section-heading"><span class="eyebrow">TU ALOJAMIENTO</span><h2>Zamora 89 Urban Stay</h2><p>Calle Zamora 89 · Vigo. Un alojamiento amplio y luminoso, preparado para familias y grupos de hasta 12 huéspedes.</p></div>
+  <div class="facts"><div><strong>7</strong><span>habitaciones</span></div><div><strong>4</strong><span>baños</span></div><div><strong>15:00</strong><span>check-in</span></div><div><strong>12:00</strong><span>check-out</span></div></div>
+  <div class="action-row"><a class="button" href="https://www.google.com/maps/dir/?api=1&destination=Calle+Zamora+89%2C+Vigo" target="_blank" rel="noopener">Cómo llegar</a></div>
+  <div class="split-feature"><img src="assets/kitchen.jpeg" alt="Cocina de Zamora 89" loading="lazy"><div><span class="eyebrow">COCINA Y SALÓN</span><h3>Espacios para compartir.</h3><ul class="checklist"><li>Cocina equipada</li><li>Horno y microondas</li><li>Lavadora</li><li>Cafetera</li><li>Comedor amplio</li><li>Salón renovado</li><li>Ascensor</li></ul></div></div>
+</section>
+<section class="section section--tint" id="habitaciones">
+  <div class="section-heading"><span class="eyebrow">DESCANSO Y PRIVACIDAD</span><h2>Las habitaciones</h2><p>Todas disponen de televisión y nevera privada. La Habitación 1 tiene un pequeño balcón y la Habitación 7 cuenta con cama individual.</p></div>
+  <div class="gallery gallery--rooms">
+    <article class="photo-card"><img src="assets/room-1.jpeg" alt="Habitación 1" loading="lazy"><div><strong>Habitación 1</strong><span>140 × 200 · balcón</span></div></article>
+    <article class="photo-card"><img src="assets/room-2.jpeg" alt="Habitación 2" loading="lazy"><div><strong>Habitación 2</strong><span>140 × 200</span></div></article>
+    <article class="photo-card"><img src="assets/room-3.jpeg" alt="Habitación 3" loading="lazy"><div><strong>Habitación 3</strong><span>140 × 200</span></div></article>
+    <article class="photo-card"><img src="assets/room-4.jpeg" alt="Habitación 4" loading="lazy"><div><strong>Habitación 4</strong><span>140 × 200</span></div></article>
+    <article class="photo-card"><img src="assets/room-5.jpeg" alt="Habitación 5" loading="lazy"><div><strong>Habitación 5</strong><span>140 × 200</span></div></article>
+    <article class="photo-card"><img src="assets/room-6.jpeg" alt="Habitación 6" loading="lazy"><div><strong>Habitación 6</strong><span>140 × 200</span></div></article>
+    <article class="photo-card"><img src="assets/room-7.jpeg" alt="Habitación 7" loading="lazy"><div><strong>Habitación 7</strong><span>90 × 200</span></div></article>
+  </div>
+  <h3 class="subheading">Cuatro baños</h3>
+  <div class="gallery gallery--baths">
+    <article class="photo-card"><img src="assets/bath-1.jpeg" alt="Baño 1" loading="lazy"><div><strong>Baño 1</strong><span>Ducha</span></div></article>
+    <article class="photo-card"><img src="assets/bath-2.jpeg" alt="Baño 2" loading="lazy"><div><strong>Baño 2</strong><span>Ducha</span></div></article>
+    <article class="photo-card"><img src="assets/bath-3.jpeg" alt="Baño 3" loading="lazy"><div><strong>Baño 3</strong><span>Ducha</span></div></article>
+    <article class="photo-card"><img src="assets/bath-4.jpeg" alt="Baño 4" loading="lazy"><div><strong>Baño 4</strong><span>Ducha</span></div></article>
+  </div>
+  <div class="split-feature wellness"><img src="assets/wellness.jpeg" alt="Espacio de ejercicio" loading="lazy"><div><span class="eyebrow">UN EXTRA DURANTE TU ESTANCIA</span><h3>Un espacio para cuidarte.</h3><p>Una pequeña sala equipada para empezar el día con energía o estirar después de recorrer Vigo.</p></div></div>
+</section>
+<section class="section" id="vigo">
+  <div class="section-heading"><span class="eyebrow">NUESTRA CIUDAD</span><h2>Descubre Vigo</h2><p>Distancias y tiempos aproximados desde Calle Zamora 89. Pulsa cada tarjeta para abrir la ruta actualizada en Google Maps.</p></div>
+  <div class="destination-grid travel-grid">
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Casco+Vello%2C+Vigo" target="_blank" rel="noopener"><strong>Casco Vello</strong><span>Historia, plazas y ambiente local</span><div class="route-meta"><b>🚶 2,4 km · 32 min</b><b>🚗 3,0 km · 11 min</b></div><em>Ver ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Monte+do+Castro%2C+Vigo" target="_blank" rel="noopener"><strong>Monte do Castro</strong><span>Las mejores vistas de la ría</span><div class="route-meta"><b>🚶 2,0 km · 28 min</b><b>🚗 2,6 km · 9 min</b></div><em>Ver ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Playa+de+Samil%2C+Vigo" target="_blank" rel="noopener"><strong>Playa de Samil</strong><span>Paseo, arena y puesta de sol</span><div class="route-meta"><b>🚶 5,6 km · 1 h 15 min</b><b>🚗 6,2 km · 14 min</b></div><em>Ver ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Playa+de+O+Vao%2C+Vigo" target="_blank" rel="noopener"><strong>Playa de O Vao</strong><span>Arena blanca y ambiente tranquilo</span><div class="route-meta"><b>🚶 7,4 km · 1 h 38 min</b><b>🚗 8,0 km · 18 min</b></div><em>Ver ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Puerto+de+Vigo" target="_blank" rel="noopener"><strong>Puerto y Náutico</strong><span>Un paseo junto al mar</span><div class="route-meta"><b>🚶 2,5 km · 33 min</b><b>🚗 3,2 km · 11 min</b></div><em>Ver ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Calle+Principe%2C+Vigo" target="_blank" rel="noopener"><strong>Calle Príncipe</strong><span>Compras y centro urbano</span><div class="route-meta"><b>🚶 1,8 km · 24 min</b><b>🚗 2,2 km · 8 min</b></div><em>Ver ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Estacion+Maritima+de+Vigo" target="_blank" rel="noopener"><strong>Islas Cíes</strong><span>Salida desde la Estación Marítima</span><div class="route-meta"><b>🚶 2,7 km · 36 min</b><b>🚗 3,3 km · 12 min</b></div><em>Ir al embarque</em></a>
+  </div>
+  <p class="estimate-note">Los tiempos son orientativos y pueden variar según el tráfico, el ritmo al caminar y la ruta elegida.</p>
+</section>
+
+<section class="section section--events" id="eventos">
+  <div class="section-heading">
+    <span class="eyebrow">AGENDA ACTUALIZADA · AGOSTO 2026</span>
+    <h2>Próximos eventos en Vigo.</h2>
+    <p>Una selección de los conciertos, espectáculos y fiestas más próximos. Pulsa cada tarjeta para consultar la información oficial.</p>
+  </div>
+  <div class="events-grid events-grid--upcoming">
+    <a class="event-card event-card--featured" href="https://hoxe.vigo.org/actualidade/avisos_transporte.php?id=3684&amp;lang=es" target="_blank" rel="noopener">
+      <span class="event-date"><b>07</b><small>AGO</small></span>
+      <div><strong>Abraham Mateo</strong><small>Concierto en el Auditorio de Castrelos</small></div>
+      <em>Ver información oficial</em>
+    </a>
+    <a class="event-card" href="https://hoxe.vigo.org/actualidade/avisos_transporte.php?id=3684&amp;lang=es" target="_blank" rel="noopener">
+      <span class="event-date"><b>09</b><small>AGO</small></span>
+      <div><strong>Ópera Nabucco</strong><small>Auditorio de Castrelos</small></div>
+      <em>Ver información oficial</em>
+    </a>
+    <a class="event-card" href="https://hoxe.vigo.org/conecenos/f_agosto.php?lang=es" target="_blank" rel="noopener">
+      <span class="event-date"><b>09</b><small>AGO</small></span>
+      <div><strong>Fiesta del Pulpo</strong><small>Celebraciones populares de agosto</small></div>
+      <em>Consultar fiestas</em>
+    </a>
+    <a class="event-card" href="https://hoxe.vigo.org/actualidade/avisos_transporte.php?id=3684&amp;lang=es" target="_blank" rel="noopener">
+      <span class="event-date"><b>11</b><small>AGO</small></span>
+      <div><strong>The Corrs</strong><small>Concierto en el Auditorio de Castrelos</small></div>
+      <em>Ver información oficial</em>
+    </a>
+    <a class="event-card" href="https://auditoriomardevigo.com/mec-category/concertos/" target="_blank" rel="noopener">
+      <span class="event-date"><b>14</b><small>AGO</small></span>
+      <div><strong>Final del Concurso Internacional de Piano</strong><small>Auditorio Mar de Vigo</small></div>
+      <em>Ver evento</em>
+    </a>
+    <a class="event-card" href="https://hoxe.vigo.org/actualidade/avisos_transporte.php?id=3684&amp;lang=es" target="_blank" rel="noopener">
+      <span class="event-date"><b>14</b><small>AGO</small></span>
+      <div><strong>Viva Suecia</strong><small>Concierto en el Auditorio de Castrelos</small></div>
+      <em>Ver información oficial</em>
+    </a>
+    <a class="event-card" href="https://hoxe.vigo.org/actualidade/avisos_transporte.php?id=3684&amp;lang=es" target="_blank" rel="noopener">
+      <span class="event-date"><b>15</b><small>AGO</small></span>
+      <div><strong>Iván Ferreiro</strong><small>Concierto en el Auditorio de Castrelos</small></div>
+      <em>Ver información oficial</em>
+    </a>
+    <a class="event-card" href="https://hoxe.vigo.org/conecenos/f_agosto.php?lang=es" target="_blank" rel="noopener">
+      <span class="event-date"><b>15–16</b><small>AGO</small></span>
+      <div><strong>Fiestas de San Roque</strong><small>Fiestas populares y celebraciones locales</small></div>
+      <em>Consultar fiestas</em>
+    </a>
+    <a class="event-card" href="https://hoxe.vigo.org/actualidade/avisos_transporte.php?id=3684&amp;lang=es" target="_blank" rel="noopener">
+      <span class="event-date"><b>16</b><small>AGO</small></span>
+      <div><strong>FNAC Live</strong><small>Concierto en el Auditorio de Castrelos</small></div>
+      <em>Ver información oficial</em>
+    </a>
+    <a class="event-card" href="https://hoxe.vigo.org/conecenos/f_agosto.php?lang=es" target="_blank" rel="noopener">
+      <span class="event-date"><b>18–24</b><small>AGO</small></span>
+      <div><strong>Romería de la Virgen del Alba</strong><small>Monte Alba</small></div>
+      <em>Consultar fiestas</em>
+    </a>
+    <a class="event-card" href="https://hoxe.vigo.org/conecenos/f_agosto.php?lang=es" target="_blank" rel="noopener">
+      <span class="event-date"><b>22–23</b><small>AGO</small></span>
+      <div><strong>Fiesta del Rosario</strong><small>Lavadores</small></div>
+      <em>Consultar fiestas</em>
+    </a>
+  </div>
+  <p class="events-note">Agenda revisada el 5 de agosto de 2026. Los horarios y programas pueden cambiar; consulta siempre la información oficial antes de desplazarte.</p>
+</section>
+
+<section class="section section--tint" id="restaurantes">
+  <div class="section-heading"><span class="eyebrow">SELECCIÓN DEL ANFITRIÓN</span><h2>Restaurantes</h2><p>Precio medio orientativo por persona, distancia y tiempo aproximado desde el apartamento.</p></div>
+  <div class="restaurant-list restaurant-list--details">
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Nisio+Vigo" target="_blank" rel="noopener"><strong>Nisio</strong><span>Marisco y pescado · €€€</span><div class="route-meta"><b>🚶 18 min</b><b>🚗 6 min</b><b>≈ 30–45 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Casa+Moncho+Vigo" target="_blank" rel="noopener"><strong>Casa Moncho</strong><span>Cocina gallega · €€</span><div class="route-meta"><b>🚶 24 min</b><b>🚗 8 min</b><b>≈ 20–30 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Casa+Marco+Vigo" target="_blank" rel="noopener"><strong>Casa Marco</strong><span>Cocina gallega cuidada · €€€</span><div class="route-meta"><b>🚶 22 min</b><b>🚗 8 min</b><b>≈ 30–45 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Follas+Novas+Vigo" target="_blank" rel="noopener"><strong>Follas Novas</strong><span>Cocina gallega · €€</span><div class="route-meta"><b>🚶 21 min</b><b>🚗 7 min</b><b>≈ 20–30 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Taberna+del+Nautico+Vigo" target="_blank" rel="noopener"><strong>Taberna del Náutico</strong><span>Producto del mar · €€</span><div class="route-meta"><b>🚶 34 min</b><b>🚗 11 min</b><b>≈ 20–35 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Don+Marco+Vigo" target="_blank" rel="noopener"><strong>Don Marco</strong><span>Italiano · €€</span><div class="route-meta"><b>🚶 25 min</b><b>🚗 8 min</b><b>≈ 18–28 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=La+Pepita+Vigo" target="_blank" rel="noopener"><strong>La Pepita</strong><span>Hamburguesas · €€</span><div class="route-meta"><b>🚶 25 min</b><b>🚗 8 min</b><b>≈ 15–22 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Heladeria+Capri+Vigo" target="_blank" rel="noopener"><strong>Capri</strong><span>Heladería · €</span><div class="route-meta"><b>🚶 24 min</b><b>🚗 8 min</b><b>≈ 4–8 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Nikko+Vigo" target="_blank" rel="noopener"><strong>Nikko</strong><span>Cocina japonesa · €€€</span><div class="route-meta"><b>🚶 27 min</b><b>🚗 9 min</b><b>≈ 30–45 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Restaurante+Los+Abetos%2C+Nigran" target="_blank" rel="noopener"><strong>Los Abetos</strong><span>Asador · carnes, pescados y mariscos · €€€€</span><div class="route-meta"><b>🚶 18 min</b><b>🚗 7 min</b><b>≈ 40–70 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Los+Pinares+Vigo" target="_blank" rel="noopener"><strong>Los Pinares</strong><span>Cocina gallega · €€</span><div class="route-meta"><b>🚶 22 min</b><b>🚗 8 min</b><b>≈ 20–35 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Bar+del+Puerto+Vigo" target="_blank" rel="noopener"><strong>Bar del Puerto</strong><span>Pescados y mariscos · €€</span><div class="route-meta"><b>🚶 24 min</b><b>🚗 9 min</b><b>≈ 18–35 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=La+Central+Vigo+Restaurante" target="_blank" rel="noopener"><strong>La Central</strong><span>Cocina de mercado · €€€</span><div class="route-meta"><b>🚶 17 min</b><b>🚗 6 min</b><b>≈ 30–50 €</b></div><em>Abrir ruta</em></a>
+  </div>
+  <p class="estimate-note">Precios orientativos por persona, sin contar combinaciones especiales, marisco por peso o bebidas premium.</p>
+</section>
+<section class="section" id="cafeterias">
+  <div class="section-heading"><span class="eyebrow">CAFÉ Y DESAYUNOS</span><h2>Para empezar el día</h2><p>Opciones cómodas para desayunar, merendar o hacer una pausa.</p></div>
+  <div class="restaurant-list restaurant-list--details">
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=MARCO+Vigo" target="_blank" rel="noopener"><strong>Mamá Elvira MARCO</strong><span>Desayunos y pastelería · €</span><div class="route-meta"><b>🚶 24 min</b><b>🚗 8 min</b><b>≈ 5–12 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Luces+de+Bohemia+Vigo" target="_blank" rel="noopener"><strong>Luces de Bohemia</strong><span>Desayunos y cocina casera · €€</span><div class="route-meta"><b>🚶 25 min</b><b>🚗 8 min</b><b>≈ 10–20 €</b></div><em>Abrir ruta</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=El+Molino+Vigo" target="_blank" rel="noopener"><strong>El Molino</strong><span>Cafetería y pastelería · €</span><div class="route-meta"><b>🚶 20 min</b><b>🚗 7 min</b><b>≈ 4–10 €</b></div><em>Abrir ruta</em></a>
+  </div>
+</section>
+<section class="section section--tint" id="servicios">
+  <div class="section-heading"><span class="eyebrow">CERCA DEL APARTAMENTO</span><h2>Servicios útiles</h2><p>Accesos directos para encontrar la opción abierta o disponible en ese momento.</p></div>
+  <div class="destination-grid travel-grid">
+    <a href="https://www.google.com/maps/search/?api=1&query=supermercado+cerca+de+Calle+Zamora+89+Vigo" target="_blank" rel="noopener"><strong>Supermercados</strong><span>Varias opciones en el entorno</span><div class="route-meta"><b>🚶 desde 3–8 min</b><b>🚗 2–4 min</b></div><em>Ver opciones</em></a>
+    <a href="https://www.google.com/maps/search/?api=1&query=farmacia+cerca+de+Calle+Zamora+89+Vigo" target="_blank" rel="noopener"><strong>Farmacias</strong><span>Consulta cuál está abierta</span><div class="route-meta"><b>🚶 desde 4–9 min</b><b>🚗 3–5 min</b></div><em>Ver opciones</em></a>
+    <a href="https://www.google.com/maps/search/?api=1&query=parking+cerca+de+Calle+Zamora+89+Vigo" target="_blank" rel="noopener"><strong>Aparcamiento</strong><span>Parkings públicos de la zona</span><div class="route-meta"><b>🚶 desde 6–12 min</b><b>🚗 4–7 min</b></div><em>Ver opciones</em></a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Calle+Zamora+89%2C+Vigo&destination=Casa+Hermo%2C+Avenida+Gran+Via+90%2C+Vigo" target="_blank" rel="noopener"><strong>Casa Hermo</strong><span>Productos gallegos · Gran Vía 90</span><div class="route-meta"><b>🚶 6 min</b><b>🚗 3 min</b></div><em>Abrir ruta</em></a>
+  </div>
+</section>
+
+<section class="section section--install" id="instalar">
+  <div class="section-heading">
+    <span class="eyebrow">GUÍA INSTALABLE</span>
+    <h2>Lleva Zamora 89 en tu móvil.</h2>
+    <p>Instala esta guía como una aplicación para abrirla desde la pantalla de inicio y consultar la información esencial incluso con conexión limitada.</p>
+  </div>
+  <div class="install-grid">
+    <article class="install-card install-card--android">
+      <div class="install-card__icon" aria-hidden="true">A</div>
+      <span class="eyebrow">ANDROID · CHROME</span>
+      <h3>Instalación automática</h3>
+      <ol>
+        <li>Abre esta guía con Google Chrome.</li>
+        <li>Pulsa el botón <strong>Instalar aplicación</strong>.</li>
+        <li>Confirma para añadirla a tu pantalla de inicio.</li>
+      </ol>
+      <button class="button button--gold" id="installAndroidBtn" type="button">Instalar aplicación</button>
+      <p class="install-status" id="androidInstallStatus">El botón se activará cuando Chrome permita la instalación.</p>
+    </article>
+    <article class="install-card install-card--ios">
+      <div class="install-card__icon" aria-hidden="true"></div>
+      <span class="eyebrow">IPHONE · SAFARI</span>
+      <h3>Añadir a pantalla de inicio</h3>
+      <ol>
+        <li>Abre esta guía con Safari.</li>
+        <li>Pulsa <strong>Compartir</strong> <span aria-label="icono compartir">□↑</span>.</li>
+        <li>Elige <strong>Añadir a pantalla de inicio</strong>.</li>
+        <li>Pulsa <strong>Añadir</strong>.</li>
+      </ol>
+      <button class="button button--outline" id="showIphoneHelp" type="button">Ver instrucciones iPhone</button>
+    </article>
+  </div>
+  <div class="install-benefits">
+    <span>Acceso rápido</span><span>Pantalla completa</span><span>Icono propio</span><span>Información esencial sin conexión</span>
+  </div>
+</section>
+
+<div class="install-modal" id="iphoneHelp" aria-hidden="true">
+  <div class="install-modal__panel" role="dialog" aria-modal="true" aria-labelledby="iphoneHelpTitle">
+    <button class="install-modal__close" id="closeIphoneHelp" type="button" aria-label="Cerrar instrucciones">×</button>
+    <span class="eyebrow">IPHONE · SAFARI</span>
+    <h2 id="iphoneHelpTitle">Instala la guía en cuatro pasos</h2>
+    <ol class="iphone-steps">
+      <li><strong>Abre Safari.</strong><span>La instalación desde iPhone debe hacerse con Safari.</span></li>
+      <li><strong>Pulsa Compartir □↑.</strong><span>Está en la barra inferior o superior del navegador.</span></li>
+      <li><strong>Añadir a pantalla de inicio.</strong><span>Desplázate por el menú si no lo ves al principio.</span></li>
+      <li><strong>Pulsa Añadir.</strong><span>El icono de Zamora 89 aparecerá junto a tus aplicaciones.</span></li>
+    </ol>
+  </div>
+</div>
+
+<section class="section" id="checkout">
+  <div class="section-heading"><span class="eyebrow">ANTES DE MARCHAR</span><h2>Check-out · 12:00</h2><p>Gracias por ayudarnos a dejar el apartamento preparado para los próximos huéspedes.</p></div>
+  <div class="checkout-list"><label><input type="checkbox"> Revisa que no olvidas nada.</label><label><input type="checkbox"> Apaga las luces y cierra las ventanas.</label><label><input type="checkbox"> Deja las llaves según las indicaciones recibidas.</label></div>
+</section>
+<section class="section section--review" id="valoracion">
+  <div class="review-panel">
+    <span class="eyebrow">GRACIAS POR ALOJARTE CON NOSOTROS</span>
+    <h2>¿Nos cuentas cómo ha sido tu estancia?</h2>
+    <p>Tu valoración ayuda a otros viajeros y nos permite seguir mejorando Zamora 89 Urban Stay.</p>
+    <div class="review-actions">
+      <a class="button button--gold" href="https://www.airbnb.es/rooms/44086976?unique_share_id=7eaabf99-3541-4779-92d0-7f8df6d7d857&viralityEntryPoint=1&s=76" target="_blank" rel="noopener">Valorar mi estancia en Airbnb</a>
+      <a class="text-link" href="https://www.airbnb.es/rooms/44086976?unique_share_id=7eaabf99-3541-4779-92d0-7f8df6d7d857&viralityEntryPoint=1&s=76" target="_blank" rel="noopener">Subir fotos de la estancia</a>
+    </div>
+    <p class="review-note">También puedes añadir tus mejores fotografías de Vigo o del apartamento al publicar tu valoración.</p>
+  </div>
+</section>
+</main>
+<footer><img src="assets/logo-z89.png" alt="Zamora 89 Urban Stay"><p>Zamora 89 Urban Stay · Vigo</p><small>Guía digital oficial</small><a href="#inicio">Volver arriba</a></footer>
+<button class="install-button" id="installBtn" hidden>Instalar app</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

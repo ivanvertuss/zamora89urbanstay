@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zamora89urbanstay.com/sitemap.xml
